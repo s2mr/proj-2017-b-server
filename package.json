@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/shimokp/proj-2017-b-server#readme",
   "devDependencies": {
+    "eslint": "^4.13.1",
     "express": "^4.16.2",
     "mysql": "^2.15.0"
   }
