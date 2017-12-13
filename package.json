@@ -1,29 +1,17 @@
 {
-  "name": "kagaya",
-  "version": "1.0.0",
-  "description": "for project practice",
-  "main": "index.js",
+  "name": "proj-2017-b-server",
+  "version": "0.0.0",
+  "private": true,
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "lint": "eslint src"
+    "start": "node ./bin/www"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/shimokp/proj-2017-b-server.git"
-  },
-  "author": "kazumasa shimomura",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/shimokp/proj-2017-b-server/issues"
-  },
-  "homepage": "https://github.com/shimokp/proj-2017-b-server#readme",
-  "devDependencies": {
-    "eslint": "^4.13.1",
-    "babel-eslint": "^8.0.3",
-    "eslint-plugin-prettier": "^2.3.1",
-    "eslint-plugin-react": "^7.5.1",
-    "express": "^4.16.2",
-    "mysql": "^2.15.0",
-    "prettier": "^1.9.2"
+  "dependencies": {
+    "body-parser": "~1.18.2",
+    "cookie-parser": "~1.4.3",
+    "debug": "~2.6.9",
+    "ejs": "~2.5.7",
+    "express": "~4.15.5",
+    "morgan": "~1.9.0",
+    "serve-favicon": "~2.4.5"
   }
 }
