@@ -29,11 +29,12 @@ router.post('/api/v1/qr', function(req, res) {
     // console.log("[place]place(id: ", place.id, " name: ", place.name, " ) part(id:", p. , ")");
     for (let p of parts) {
         console.log("[location insert into DB]place(id: ",place.id, ", name: ", place.name, ") part(id: ", p.id, " name: ", p.name, ")");
-        // connection.query('insert into location place_id=?, part_id=?', place.id p.id)
+        var query = connection.query('insert into locations (place_id, part_id) values (?,?)', [place.id, p.id], function (error, results, fields) {
+            if(error) console.error(error);
+            console.log('succeed')
+        })
+        console.log(query.sql)
     }
-    
-
-
 
     // console.log("[place]", place)
 
