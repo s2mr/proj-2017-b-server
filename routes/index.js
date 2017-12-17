@@ -5,7 +5,7 @@ var connection = require('../public/javascripts/mysqlConnection');
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-    connection.query('select * from parts', function(err, rows) {    
+    connection.query('select * from locations', function(err, rows) {    
         res.render('index', {
             title: 'プロジェクト演習',
             rows: rows
@@ -26,10 +26,13 @@ router.post('/api/v1/qr', function(req, res) {
     var place = json.place
     var parts = json.parts
 
-    console.log("[place]id: ", place.id, " name: ", place.name);
+    // console.log("[place]place(id: ", place.id, " name: ", place.name, " ) part(id:", p. , ")");
     for (let p of parts) {
-        console.log("[parts]id: ", p.id, " name: ", p.name);
+        console.log("[location insert into DB]place(id: ",place.id, ", name: ", place.name, ") part(id: ", p.id, " name: ", p.name, ")");
+        // connection.query('insert into location place_id=?, part_id=?', place.id p.id)
     }
+    
+
 
 
     // console.log("[place]", place)

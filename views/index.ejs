@@ -10,9 +10,11 @@
     
     <h1>データベース</h1>
     <p>
+        
+    
     <% rows.forEach(function(row) { %>
         <ol>
-            <li><%= row.name %></li>
+            <li>place_id: <%= row.place_id %>, part_id: <%= row.part_id %></li>
         </ol>
     <% }) %>
     </p>
