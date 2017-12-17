@@ -1,6 +1,6 @@
 -- up
 create table parts(
-    id int auto_increment,
+    id int auto_increment not null,
     name varchar(255) not null,
     created_at timestamp not null default now() on update now(),
     updated_at timestamp not null default now(),
