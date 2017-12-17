@@ -1,8 +1,10 @@
 -- up
-create table parts 
-    id int primary key,
+create table parts(
+    id int auto_increment,
     name varchar(255) not null,
-    created_at datetime,
-    updated_at datetime
+    created_at timestamp not null default now() on update now(),
+    updated_at timestamp not null default now(),
+    primary key(id)
+);
     
 -- down

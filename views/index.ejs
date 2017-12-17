@@ -7,5 +7,14 @@
   <body>
     <h1><%= title %></h1>
     <p>このページは株式会社カガヤの部品の位置情報を表示するためのページです</p>
+    
+    <h1>データベース</h1>
+    <p>
+    <% rows.forEach(function(row) { %>
+        <ol>
+            <li><%= row.name %></li>
+        </ol>
+    <% }) %>
+    </p>
   </body>
 </html>
