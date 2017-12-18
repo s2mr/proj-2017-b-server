@@ -7,7 +7,6 @@ var mysql = require('mysql2');
 //   database: 'kagaya'
 // };
 
-var connection = mysql.createConnection(process.env.CLEARDB_DATABASE_URL);
+var pool = mysql.createPool(process.env.CLEARDB_DATABASE_URL);
 
-// mysql.createConnection('mysql://user:pass@host/db?debug=true&charset=BIG5_CHINESE_CI&timezone=-0700');
-module.exports = connection;
+module.exports = pool;

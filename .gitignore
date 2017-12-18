@@ -65,3 +65,4 @@ typings/
 
 public/images/qr-part
 public/images/qr-place
+migrations.js
