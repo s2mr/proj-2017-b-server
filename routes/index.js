@@ -5,7 +5,7 @@ var pool = require('../public/javascripts/mysqlConnection');
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-    connection.query('select * from locations', function(err, rows) {
+    pool.query('select * from locations', function(err, rows) {
         res.render('index', {
             title: 'プロジェクト演習',
             rows: rows
